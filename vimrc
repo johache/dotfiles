@@ -11,6 +11,7 @@ set splitbelow " Open new split views to the right
 
 "set clipboard=unnamed   " Share clipboard with OS
 "let g:airline_powerline_fonts = 1
+let g:deoplete#enable_at_startup = 1
 
 " Using vim-plug
 " Use the follwing command to re-install
@@ -28,6 +29,10 @@ Plug 'scrooloose/nerdtree'
 Plug 'mkitt/tabline.vim'
 Plug 'terryma/vim-smooth-scroll'
 Plug 'vim-scripts/a.vim'
+function! DoRemote(arg)
+  UpdateRemotePlugins
+endfunction
+Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 
 " Add plugins to &runtimepath
 call plug#end()

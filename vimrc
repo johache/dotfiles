@@ -6,6 +6,9 @@ set laststatus=2
 set number              " Show absolute line numbers
 set relativenumber      " Show relatve line numbers
 set tabstop=2 shiftwidth=2 expandtab " Replace tabs with double spaces
+set splitright " Open new split views to the right
+set splitbelow " Open new split views to the right
+
 "set clipboard=unnamed   " Share clipboard with OS
 "let g:airline_powerline_fonts = 1
 
@@ -23,6 +26,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'mkitt/tabline.vim'
 Plugin 'terryma/vim-smooth-scroll'
+Plugin 'vim-scripts/a.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -50,3 +54,8 @@ noremap <silent> <C-U> :call smooth_scroll#up(&scroll, 10, 2)<CR>
 noremap <silent> <C-D> :call smooth_scroll#down(&scroll, 10, 2)<CR>
 noremap <silent> <C-B> :call smooth_scroll#up(&scroll*2, 10, 4)<CR>
 noremap <silent> <C-F> :call smooth_scroll#down(&scroll*2, 10, 4)<CR>
+" Temporarly disable arrows
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>

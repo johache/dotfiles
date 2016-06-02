@@ -12,24 +12,25 @@ set splitbelow " Open new split views to the right
 "set clipboard=unnamed   " Share clipboard with OS
 "let g:airline_powerline_fonts = 1
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
+" Using vim-plug
+" Use the follwing command to re-install
+" curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
+"    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+call plug#begin('~/.vim/plugged')
 
 " Core bundles
-Plugin 'flazz/vim-colorschemes'
-Plugin 'tpope/vim-fugitive'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'mkitt/tabline.vim'
-Plugin 'terryma/vim-smooth-scroll'
-Plugin 'vim-scripts/a.vim'
+Plug 'flazz/vim-colorschemes'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'mkitt/tabline.vim'
+Plug 'terryma/vim-smooth-scroll'
+Plug 'vim-scripts/a.vim'
 
-call vundle#end()            " required
-filetype plugin indent on    " required
+" Add plugins to &runtimepath
+call plug#end()
 
 "" Keymapping
 nnoremap <F5> :NERDTreeToggle<CR>

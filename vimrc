@@ -2,6 +2,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 colorscheme jelleybeans
+set ic                  " Set search to ignore case
 set laststatus=2
 set number              " Show absolute line numbers
 set relativenumber      " Show relatve line numbers
@@ -29,6 +30,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'mkitt/tabline.vim'
 Plug 'terryma/vim-smooth-scroll'
 Plug 'vim-scripts/a.vim'
+Plug 'tpope/vim-commentary'
+Plug 'scrooloose/syntastic'
 function! DoRemote(arg)
   UpdateRemotePlugins
 endfunction
@@ -65,3 +68,19 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+
+" vim-commentary
+autocmd FileType cmake setlocal commentstring=#\ %s
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_remove_include_errors = 1
+let g:syntastic_cpp_include_dirs = [ 'WebRTC/WebRTC_src/src/third_party/boringssl/src/include', 'include' ]
+

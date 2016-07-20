@@ -37,6 +37,14 @@ function plugin
 	open /Applications/Safari.app/
 end
 
+function up 
+  set ups
+  for i in (seq 1 $argv[1])
+    set ups "$ups../"
+  end
+  cd $ups
+end
+
 alias fetchPlugin="git clone --recursive https://bitbucket.org/TemasysCommunications/skyway-webrtcplugin"
 alias showSign='codesign -d --verbose=4' 
 alias pss='python -m SimpleHTTPServer'

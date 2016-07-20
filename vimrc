@@ -72,6 +72,9 @@ noremap h <NOP>
 noremap j <NOP>
 noremap k <NOP>
 noremap l <NOP>
+" Copy/Pasting  mapping
+nnoremap S "_diwP
+vnoremap S "_d"0P
 
 " vim-commentary
 autocmd FileType cmake setlocal commentstring=#\ %s

@@ -78,6 +78,10 @@ vnoremap S "_d"0P
 
 " vim-commentary
 autocmd FileType cmake setlocal commentstring=#\ %s
+autocmd FileType cpp setlocal commentstring=//\ %s
+autocmd FileType h setlocal commentstring=//\ %s
+autocmd FileType dat setlocal commentstring=//\ %s
+autocmd FileType pac setlocal commentstring=//\ %s
 
 " Syntastic
 set statusline+=%#warningmsg#

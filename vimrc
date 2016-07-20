@@ -68,6 +68,10 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+noremap h <NOP>
+noremap j <NOP>
+noremap k <NOP>
+noremap l <NOP>
 
 " vim-commentary
 autocmd FileType cmake setlocal commentstring=#\ %s

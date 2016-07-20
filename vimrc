@@ -9,8 +9,12 @@ set relativenumber      " Show relatve line numbers
 set tabstop=2 shiftwidth=2 expandtab " Replace tabs with double spaces
 set splitright " Open new split views to the right
 set splitbelow " Open new split views to the right
+set cursorline " Highlights current line
+au BufEnter /private/tmp/crontab.* setl backupcopy=yes
+autocmd filetype crontab setlocal nobackup nowritebackup
 
-"set clipboard=unnamed   " Share clipboard with OS
+
+" set clipboard=unnamed   " OS clipboard linked to * and + registers
 "let g:airline_powerline_fonts = 1
 let g:deoplete#enable_at_startup = 1
 

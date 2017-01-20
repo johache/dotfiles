@@ -61,8 +61,6 @@ end
 # LAUNCH SCRIPTS
 # ===================================================================
 set --export PATH $PATH ~/workspace/depot_tools
-set --export PATH ~/Workspace/apache-maven-3.2.3/bin $PATH
-#export BUILD_MAC_SDK_EXPERIMENTAL=1
 
 set --export LSCOLORS GxFxCxDxBxegedabagaced
 set --export LC_ALL en_US.UTF-8

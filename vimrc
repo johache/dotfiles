@@ -13,6 +13,11 @@ set cursorline " Highlights current line
 au BufEnter /private/tmp/crontab.* setl backupcopy=yes
 autocmd filetype crontab setlocal nobackup nowritebackup
 
+" Reopen file at the place you last closed it
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal! g'\"" | endif
+endif
 
 " set clipboard=unnamed   " OS clipboard linked to * and + registers
 "let g:airline_powerline_fonts = 1
@@ -79,6 +84,11 @@ noremap l <NOP>
 " Copy/Pasting  mapping
 nnoremap S "_diwP
 vnoremap S "_d"0P
+" Ctag
+" set tags=./tags;/ " vim to look up the file tree to find a ctag file
+" nnoremap <M-]> :sp <CR>:exec("tag ".expand("<cword>"))<CR>
+nnoremap <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+nnoremap <C-W><C-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 " vim-commentary
 autocmd FileType cmake setlocal commentstring=#\ %s

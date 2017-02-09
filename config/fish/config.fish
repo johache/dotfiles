@@ -5,6 +5,7 @@
 # ===================================================================
 alias ll='ls -l'
 alias lal='ls -al'
+alias lla='ls -al'
 alias cdt='cd /Users/johache/workspace'
 alias cdl='cd ~/Library/Internet\ Plug-Ins'
 alias v='nvim'

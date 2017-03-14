@@ -56,22 +56,13 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-" Tab navigation NO WORKING
-nnoremap <C-1> 1gt
-nnoremap <C-2> 2gt
-nnoremap <C-3> 3gt
-nnoremap <C-4> 4gt
-nnoremap <C-5> 5gt
-nnoremap <C-6> 6gt
-nnoremap <C-7> 7gt
-nnoremap <C-8> 8gt
-nnoremap <C-9> 9gt
-nnoremap <C-0> 10gt
+
 " SmoothScroll remap
 noremap <silent> <C-U> :call smooth_scroll#up(&scroll, 10, 2)<CR>
 noremap <silent> <C-D> :call smooth_scroll#down(&scroll, 10, 2)<CR>
 noremap <silent> <C-B> :call smooth_scroll#up(&scroll*2, 10, 4)<CR>
 noremap <silent> <C-F> :call smooth_scroll#down(&scroll*2, 10, 4)<CR>
+
 " Temporarly disable arrows
 noremap <Up> <NOP>
 noremap <Down> <NOP>
@@ -109,3 +100,4 @@ let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_remove_include_errors = 1
 let g:syntastic_cpp_include_dirs = [ 'WebRTC/WebRTC_src/src/third_party/boringssl/src/include', 'include' ]
 
+set mouse=a

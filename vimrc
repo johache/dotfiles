@@ -3,7 +3,7 @@ filetype off                  " required
 
 colorscheme jelleybeans
 set ic                  " Set search to ignore case
-set laststatus=2
+set laststatus=3
 set number              " Show absolute line numbers
 set relativenumber      " Show relatve line numbers
 set tabstop=2 shiftwidth=2 expandtab " Replace tabs with double spaces
@@ -51,6 +51,8 @@ call plug#end()
 
 "" Keymapping
 nnoremap <F5> :NERDTreeToggle<CR>
+nnoremap U :later<CR>
+nnoremap <C-r> :so $MYVIMRC<CR>
 " Split view navigation
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>

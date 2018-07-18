@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[
+// Copyright ${1:/*copyright*/}
+
+// This class's header
+#include "${2:header}"
+
+// Includes from this project
+
+// Includes from other non-standard projects
+
+// STD Includes
+
+namespace ${3:/*namespace*/} {
+
+}
+
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>cpp_</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python</scope> -->
+</snippet>

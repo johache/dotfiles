@@ -1,0 +1,13 @@
+<snippet>
+  <content><![CDATA[
+////////////////////////////////////////////////////////////////////////////
+/// Test ${1:functionName}
+////////////////////////////////////////////////////////////////////////////
+TEST_F(${2:TestClassName}, Test_${1:functionName}) {
+}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>TEST_F</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.c++</scope>
+</snippet>

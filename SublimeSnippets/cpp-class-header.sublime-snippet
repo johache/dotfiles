@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[
+// Copyright ${1:/*copyright*/}
+
+#ifndef __${4:/*headerprotection*/}__
+#define __${4:/*headerprotection*/}__
+
+// Includes from this project
+
+// Includes from other non-standard projects
+
+// STD Includes
+
+namespace ${2:/*namespace*/} {
+
+  class ${3:/*classname*/} {
+  public:
+
+  private:
+
+  };
+}
+
+#endif /* __${4:/*headerprotection*/}__ */
+
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>header_</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.c++</scope> -->
+</snippet>
